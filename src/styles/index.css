@@ -9,6 +9,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 a {

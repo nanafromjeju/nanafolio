@@ -8,8 +8,8 @@ const Main = () => {
   return (
     <div css={mainContainer}>
       <HeroSection />
-      <AboutSection />
       <ProjectSection />
+      <AboutSection />
     </div>
   );
 };

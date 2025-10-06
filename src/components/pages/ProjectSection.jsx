@@ -60,14 +60,14 @@ const ProjectSection = () => {
   }, []);
 
   const getCardStyle = (index) => {
-    const cardProgress = scrollProgress * 1.5 - index * 0.3;
+    const cardProgress = scrollProgress * 2.0 - index * 0.35;
 
     const angle = cardProgress * 180;
 
     const radius = 400;
 
     const x = Math.cos((angle * Math.PI) / 180) * radius;
-    const y = Math.sin((angle * Math.PI) / 180) * radius * 0.6; // 타원형으로
+    const y = Math.sin((angle * Math.PI) / 180) * radius * 0.6;
 
     const scale = 0.6 + cardProgress * 0.4;
 
@@ -105,15 +105,15 @@ const ProjectSection = () => {
 
 const projectSectionContainer = css`
   width: 100%;
-  height: 200vh;
+  height: 500vh;
   position: relative;
   background: #000;
 `;
 
 const moonImage = css`
-  width: 1000px;
+  width: 500px;
   height: auto;
-  position: absolute;
+  position: sticky;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -127,7 +127,7 @@ const orbitContainer = css`
   top: 0;
   left: 0;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
