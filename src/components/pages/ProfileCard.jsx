@@ -1,13 +1,23 @@
 import { css } from '@emotion/react';
+import { motion } from 'framer-motion';
 import ProfileCardTopDecoration from './ProfileCardTopDecoration';
+import { iconVariants } from '../../constants/motion';
 
 const ProfileCard = ({ type, title, subtitle, date, children }) => {
   return (
-    <div css={profileCardContainer}>
-      <span css={topLeftIcon}>+</span>
-      <span css={topRightIcon}>+</span>
-      <span css={bottomLeftIcon}>+</span>
-      <span css={bottomRightIcon}>+</span>
+    <motion.div css={profileCardContainer} whileHover="hover" initial="initial">
+      <motion.span css={topLeftIcon} variants={iconVariants}>
+        +
+      </motion.span>
+      <motion.span css={topRightIcon} variants={iconVariants}>
+        +
+      </motion.span>
+      <motion.span css={bottomLeftIcon} variants={iconVariants}>
+        +
+      </motion.span>
+      <motion.span css={bottomRightIcon} variants={iconVariants}>
+        +
+      </motion.span>
 
       <ProfileCardTopDecoration />
 
@@ -25,7 +35,7 @@ const ProfileCard = ({ type, title, subtitle, date, children }) => {
         {subtitle && <div css={subtitleStyle}>{subtitle}</div>}
         {children}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -38,6 +48,7 @@ const profileCardContainer = css`
   min-height: auto;
   width: 100%;
   margin: 40px auto;
+  cursor: pointer;
 `;
 
 const contentBoxStyle = css`
@@ -90,6 +101,7 @@ const cornerPlusStyle = css`
   font-size: 40px;
   font-weight: 100;
   line-height: 1;
+  display: inline-block;
 `;
 
 const topLeftIcon = css`
