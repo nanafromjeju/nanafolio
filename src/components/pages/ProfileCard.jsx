@@ -1,5 +1,5 @@
-/** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import ProfileCardTopDecoration from './ProfileCardTopDecoration';
 
 const ProfileCard = ({ type, title, subtitle, date, children }) => {
   return (
@@ -9,19 +9,21 @@ const ProfileCard = ({ type, title, subtitle, date, children }) => {
       <span css={bottomLeftIcon}>+</span>
       <span css={bottomRightIcon}>+</span>
 
+      <ProfileCardTopDecoration />
+
       <div css={contentBoxStyle}>
         <div>
           <div css={headerStyle}>{type}</div>
         </div>
+      </div>
 
-        <div css={bottomInfoStyle}>
-          <div css={titleStyle}>
-            {title}
-            <div css={dateStyle}>{date}</div>
-          </div>
-          {subtitle && <div css={subtitleStyle}>{subtitle}</div>}
-          {children}
+      <div css={bottomInfoStyle}>
+        <div css={titleStyle}>
+          {title}
+          <div css={dateStyle}>{date}</div>
         </div>
+        {subtitle && <div css={subtitleStyle}>{subtitle}</div>}
+        {children}
       </div>
     </div>
   );
@@ -30,17 +32,18 @@ const ProfileCard = ({ type, title, subtitle, date, children }) => {
 const profileCardContainer = css`
   position: relative;
   background-color: #edf3bd;
-  border-radius: 8px;
   padding: 20px;
-  max-width: 350px;
+  min-width: 250px;
+  max-width: 330px;
+  min-height: auto;
   width: 100%;
   margin: 40px auto;
 `;
 
 const contentBoxStyle = css`
-  background-color: #2a2a2a;
-  min-height: 350px;
-  padding: 40px 30px;
+  background-color: #25292c;
+  min-height: 230px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,32 +61,34 @@ const bottomInfoStyle = css`
 `;
 
 const titleStyle = css`
-  color: #fff;
+  color: #1a1c12;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 `;
 
 const subtitleStyle = css`
-  color: #ccc;
+  color: #55512e;
   font-size: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 `;
 
 const dateStyle = css`
-  color: #aaa;
+  color: #55512e;
   font-size: 14px;
   text-align: right;
+  font-family: 'Supply', sans-serif;
+  font-weight: 400;
 `;
 
 const cornerPlusStyle = css`
   position: absolute;
   color: #edf3bd;
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1;
 `;
 

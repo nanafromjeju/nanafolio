@@ -18,18 +18,6 @@ const AboutSection = () => {
           subtitle="프론트엔드 개발자"
           date="2025.05 - 현재"
         />
-        <ProfileCard
-          type="EXPERIENCE"
-          title="팀토이즈"
-          subtitle="프론트엔드 개발자"
-          date="2025.05 - 현재"
-        />
-        <ProfileCard
-          type="EXPERIENCE"
-          title="팀토이즈"
-          subtitle="프론트엔드 개발자"
-          date="2025.05 - 현재"
-        />
       </div>
 
       <div css={rollingTextContainer}>
@@ -103,7 +91,7 @@ const rollingTextItem = css`
 `;
 
 const symbolStyle = css`
-  color: #00aeef;
+  color: #edf3bd;
   font-size: 20px;
   padding-right: 20px;
 `;

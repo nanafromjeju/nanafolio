@@ -105,13 +105,13 @@ const ProjectSection = () => {
 
 const projectSectionContainer = css`
   width: 100%;
-  height: 500vh;
-  position: relative;
+  height: 300vh;
   background: #000;
+  overflow: hidden;
 `;
 
 const moonImage = css`
-  width: 500px;
+  width: 700px;
   height: auto;
   position: sticky;
   top: 50%;

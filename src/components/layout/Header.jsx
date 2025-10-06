@@ -8,9 +8,8 @@ const Header = () => {
         <div css={headerLogo}>nanafolio</div>
 
         <ul css={headerMenu}>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
+          <li>PROJECTS</li>
+          <li>ABOUT</li>
         </ul>
       </div>
     </div>
