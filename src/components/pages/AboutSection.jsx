@@ -8,16 +8,18 @@ const AboutSection = () => {
   return (
     <div css={aboutSection}>
       <TopDecoration />
-      <h3 css={aboutTitle}>ABOUT</h3>
-      <p>UX 문제점을 개선하고 사용자 경험을 중시하는 개발자 김난아입니다.</p>
+      <div css={aboutContent}>
+        <h3 css={aboutTitle}>ABOUT</h3>
+        <p>UX 문제점을 개선하고 사용자 경험을 중시하는 개발자 김난아입니다.</p>
 
-      <div css={profileCardWrapper}>
-        <ProfileCard
-          type="EXPERIENCE"
-          title="팀토이즈"
-          subtitle="프론트엔드 개발자"
-          date="2025.05 - 현재"
-        />
+        <div css={profileCardWrapper}>
+          <ProfileCard
+            type="EXPERIENCE"
+            title="팀토이즈"
+            subtitle="프론트엔드 개발자"
+            date="2025.05 - 현재"
+          />
+        </div>
       </div>
 
       <div css={rollingTextContainer}>
@@ -38,9 +40,18 @@ const aboutSection = css`
   width: 100%;
   height: 100vh;
   padding: 0px 0px;
+  position: relative;
+`;
+
+const aboutContent = css`
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
 `;
 
 const aboutTitle = css`
+  margin: 0;
+  margin-bottom: 10px;
   font-family: 'Supply', sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -58,8 +69,8 @@ const profileCardWrapper = css`
 const rollingTextContainer = css`
   width: 100%;
   overflow: hidden;
-  position: relative;
-  bottom: 0;
+  position: absolute;
+  bottom: 20px;
   left: 0;
 `;
 

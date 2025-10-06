@@ -1,36 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 import ProfileCard from './ProfileCard';
+import { projects } from '../../data/text';
 
 const ProjectSection = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
-
-  const projects = [
-    {
-      type: 'PROJECT 01',
-      title: 'E-Commerce',
-      subtitle: '쇼핑몰 플랫폼',
-      date: '2024.12',
-    },
-    {
-      type: 'PROJECT 02',
-      title: 'Dashboard',
-      subtitle: '관리자 대시보드',
-      date: '2024.10',
-    },
-    {
-      type: 'PROJECT 03',
-      title: 'Portfolio',
-      subtitle: '개인 포트폴리오',
-      date: '2024.08',
-    },
-    {
-      type: 'PROJECT 04',
-      title: 'Mobile App',
-      subtitle: '모바일 애플리케이션',
-      date: '2024.06',
-    },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
