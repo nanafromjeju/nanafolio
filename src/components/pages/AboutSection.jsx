@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import { motion } from 'framer-motion';
 import TopDecoration from './TopDecoration';
 import ProfileCard from './ProfileCard';
 import { rollingTexts } from '../../data/text';
@@ -8,19 +9,48 @@ const AboutSection = () => {
   return (
     <div css={aboutSection}>
       <TopDecoration />
-      <div css={aboutContent}>
-        <h3 css={aboutTitle}>ABOUT</h3>
-        <p>UX 문제점을 개선하고 사용자 경험을 중시하는 개발자 김난아입니다.</p>
+      <motion.div
+        css={aboutContent}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <motion.h3
+          css={aboutTitle}
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 0.5, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          ABOUT
+        </motion.h3>
 
-        <div css={profileCardWrapper}>
+        <motion.p
+          css={aboutDescription}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          A frontend developer passionate about solving UX problems
+        </motion.p>
+
+        <motion.div
+          css={profileCardWrapper}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
           <ProfileCard
             type="EXPERIENCE"
-            title="팀토이즈"
-            subtitle="프론트엔드 개발자"
-            date="2025.05 - 현재"
+            title="TEAMTOYS"
+            subtitle="Front-end Developer"
+            date="2025.05 - Present"
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <div css={rollingTextContainer}>
         <h1 css={rollingTextWrapper}>
@@ -56,14 +86,20 @@ const aboutTitle = css`
   font-weight: 400;
   font-size: 20px;
   color: #edf3bd;
-  opacity: 0.5;
+`;
+
+const aboutDescription = css`
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  font-family: 'Supply', sans-serif;
 `;
 
 const profileCardWrapper = css`
   display: flex;
   flex-direction: row;
   gap: 40px;
-  padding: 0px 20px;
+  padding: 30px 20px;
 `;
 
 const rollingTextContainer = css`

@@ -65,6 +65,7 @@ const headerStyle = css`
   font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 20px;
+  font-family: 'Supply', sans-serif;
 `;
 
 const bottomInfoStyle = css`
@@ -77,22 +78,26 @@ const titleStyle = css`
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 10px;
+  font-family: 'Supply', sans-serif;
 `;
 
 const subtitleStyle = css`
   color: #55512e;
   font-size: 16px;
   margin-bottom: 10px;
+  font-family: 'Supply', sans-serif;
 `;
 
 const dateStyle = css`
   color: #55512e;
-  font-size: 14px;
+  font-size: 12px;
   text-align: right;
   font-family: 'Supply', sans-serif;
   font-weight: 400;
+  white-space: pre-line;
+  flex-shrink: 0;
 `;
 
 const cornerPlusStyle = css`

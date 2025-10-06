@@ -132,6 +132,11 @@ const mainIntroduction = css`
   margin-top: 20px;
   color: #fff;
   text-align: left;
+
+  span {
+    font-family: inherit;
+    letter-spacing: -1px;
+  }
 `;
 
 export default HeroSection;

@@ -26,26 +26,26 @@ export const rollingTexts = [
 export const projects = [
   {
     type: 'PROJECT 01',
-    title: 'E-Commerce',
-    subtitle: '쇼핑몰 플랫폼',
-    date: '2024.12',
-  },
-  {
-    type: 'PROJECT 02',
-    title: 'Dashboard',
-    subtitle: '관리자 대시보드',
+    title: 'Sojib',
+    subtitle: 'Class Action Website',
     date: '2024.10',
   },
   {
+    type: 'PROJECT 02',
+    title: 'Midem AI',
+    subtitle: 'AI Service',
+    date: '2025.09',
+  },
+  {
     type: 'PROJECT 03',
-    title: 'Portfolio',
-    subtitle: '개인 포트폴리오',
-    date: '2024.08',
+    title: 'DD Partners',
+    subtitle: 'Security Solution',
+    date: '2025.08',
   },
   {
     type: 'PROJECT 04',
-    title: 'Mobile App',
-    subtitle: '모바일 애플리케이션',
-    date: '2024.06',
+    title: 'MHedusolution',
+    subtitle: 'English Education',
+    date: '2025.07',
   },
 ];
