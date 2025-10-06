@@ -93,7 +93,7 @@ const rollingTextWrapper = css`
 
 const rollingTextItem = css`
   font-size: 30px;
-  color: #fff;
+  color: #edf3bd;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -102,9 +102,10 @@ const rollingTextItem = css`
 `;
 
 const symbolStyle = css`
-  color: #edf3bd;
+  color: #55512e;
   font-size: 20px;
   padding-right: 20px;
+  padding-top: 4px;
 `;
 
 export default AboutSection;

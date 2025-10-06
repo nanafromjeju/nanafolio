@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import { motion } from 'framer-motion';
 
 const TopDecoration = () => {
   return (
@@ -7,17 +8,55 @@ const TopDecoration = () => {
       <div css={dotGrid}>
         {Array(9)
           .fill()
-          .map((_, i) => (
-            <div key={i} css={dotStyle} />
-          ))}
+          .map((_, i) => {
+            const row = Math.floor(i / 3);
+            const col = i % 3;
+            const delay = (row + col) * 0.15;
+
+            return (
+              <motion.div
+                key={i}
+                css={dotStyle}
+                animate={{
+                  scale: [1, 1.4, 1],
+                  opacity: [0.6, 1, 0.6],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  delay: delay,
+                  ease: 'easeInOut',
+                }}
+              />
+            );
+          })}
       </div>
       <div css={mainDivider} />
       <div css={dotGrid}>
         {Array(9)
           .fill()
-          .map((_, i) => (
-            <div key={i} css={dotStyle} />
-          ))}
+          .map((_, i) => {
+            const row = Math.floor(i / 3);
+            const col = i % 3;
+            const delay = (row + col) * 0.15;
+
+            return (
+              <motion.div
+                key={i}
+                css={dotStyle}
+                animate={{
+                  scale: [1, 1.4, 1],
+                  opacity: [0.6, 1, 0.6],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  delay: delay,
+                  ease: 'easeInOut',
+                }}
+              />
+            );
+          })}
       </div>
     </div>
   );

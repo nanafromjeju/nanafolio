@@ -1,22 +1,73 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import { motion } from 'framer-motion';
 
 const HeroSection = () => {
+  const introText =
+    "HI, THERE!\nI'M NANA, A FRONTEND DEVELOPER\nWHO LOVES CODE AND CATS";
+
   return (
     <div css={heroSection}>
       <div css={mainTextWrapper}>
-        <div css={mainTextTopGroup}>
-          <p css={mainTitle}>Nana's</p>
-          <div css={mainDivider} />
-        </div>
-        <div css={mainTextBottomGroup}>
-          <p css={mainIntroduction}>
-            HI, THERE!
-            <br /> I'M NANA, A FRONTEND DEVELOPER <br />
-            WHO LOVES CODE AND CATS
-          </p>
-          <p css={mainSubtitle}>Portfolio</p>
-        </div>
+        <motion.div
+          css={mainTextTopGroup}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 30 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          <motion.p
+            css={mainTitle}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            Nana's
+          </motion.p>
+          <motion.div
+            css={mainDivider}
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            style={{ transformOrigin: 'left' }}
+          />
+        </motion.div>
+
+        <motion.div
+          css={mainTextBottomGroup}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+        >
+          <motion.p
+            css={mainSubtitle}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+          >
+            Portfolio
+          </motion.p>
+
+          <motion.p
+            css={mainIntroduction}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 2.2 }}
+          >
+            {introText.split('').map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.05,
+                  delay: 2.3 + index * 0.03,
+                }}
+              >
+                {char === '\n' ? <br /> : char}
+              </motion.span>
+            ))}
+          </motion.p>
+        </motion.div>
       </div>
     </div>
   );
@@ -42,14 +93,12 @@ const mainTextWrapper = css`
 const mainTextTopGroup = css`
   display: flex;
   flex-direction: row;
-  transform: translateY(30px);
 `;
 
 const mainTextBottomGroup = css`
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
-  transform: translateY(-30px);
 `;
 
 const mainDivider = css`

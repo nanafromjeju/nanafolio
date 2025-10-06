@@ -52,7 +52,7 @@ const profileCardContainer = css`
 `;
 
 const contentBoxStyle = css`
-  background-color: #25292c;
+  background-color: #55512e;
   min-height: 230px;
   padding: 30px 20px;
   display: flex;
@@ -61,7 +61,7 @@ const contentBoxStyle = css`
 `;
 
 const headerStyle = css`
-  color: #888;
+  color: #edf3bd;
   font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 20px;
