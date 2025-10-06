@@ -11,8 +11,9 @@ const HeroSection = () => {
         </div>
         <div css={mainTextBottomGroup}>
           <p css={mainIntroduction}>
-            Hi, there!
-            <br /> I'm Nana, a front-end developer based in Korea
+            HI, THERE!
+            <br /> I'M NANA, A FRONTEND DEVELOPER <br />
+            WHO LOVES CODE AND CATS
           </p>
           <p css={mainSubtitle}>Portfolio</p>
         </div>
@@ -41,12 +42,14 @@ const mainTextWrapper = css`
 const mainTextTopGroup = css`
   display: flex;
   flex-direction: row;
+  transform: translateY(30px);
 `;
 
 const mainTextBottomGroup = css`
   display: flex;
   flex-direction: row;
   align-items: center;
+  transform: translateY(-30px);
 `;
 
 const mainDivider = css`
