@@ -32,14 +32,14 @@ const profileCardContainer = css`
   background-color: #edf3bd;
   border-radius: 8px;
   padding: 20px;
-  max-width: 400px;
+  max-width: 350px;
   width: 100%;
   margin: 40px auto;
 `;
 
 const contentBoxStyle = css`
   background-color: #2a2a2a;
-  min-height: 400px;
+  min-height: 350px;
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
