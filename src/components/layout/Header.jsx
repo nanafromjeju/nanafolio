@@ -2,14 +2,23 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 const Header = () => {
+  const scrollSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div css={headerContainer}>
       <div css={headerContent}>
-        <div css={headerLogo}>nanafolio</div>
+        <div css={headerLogo} onClick={() => scrollSection('hero-section')}>
+          nanafolio
+        </div>
 
         <ul css={headerMenu}>
-          <li>PROJECTS</li>
-          <li>ABOUT</li>
+          <li onClick={() => scrollSection('project-section')}>PROJECTS</li>
+          <li onClick={() => scrollSection('about-section')}>ABOUT</li>
         </ul>
       </div>
     </div>

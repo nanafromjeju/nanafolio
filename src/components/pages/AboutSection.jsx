@@ -7,7 +7,7 @@ import { rollingTexts } from '../../data/text';
 
 const AboutSection = () => {
   return (
-    <div css={aboutSection}>
+    <div id="about-section" css={aboutSection}>
       <TopDecoration />
       <motion.div
         css={aboutContent}

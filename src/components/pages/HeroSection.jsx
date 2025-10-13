@@ -7,7 +7,7 @@ const HeroSection = () => {
     "HI, THERE!\nI'M NANA, A FRONTEND DEVELOPER\nWHO LOVES CODE AND CATS";
 
   return (
-    <div css={heroSection}>
+    <div id="hero-section" css={heroSection}>
       <div css={mainTextWrapper}>
         <motion.div
           css={mainTextTopGroup}
