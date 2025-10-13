@@ -3,9 +3,14 @@ import { motion } from 'framer-motion';
 import ProfileCardTopDecoration from './ProfileCardTopDecoration';
 import { iconVariants } from '../../constants/motion';
 
-const ProfileCard = ({ type, title, subtitle, date, children }) => {
+const ProfileCard = ({ type, title, subtitle, date, children, onClick }) => {
   return (
-    <motion.div css={profileCardContainer} whileHover="hover" initial="initial">
+    <motion.div
+      css={profileCardContainer}
+      whileHover="hover"
+      initial="initial"
+      onClick={onClick}
+    >
       <motion.span css={topLeftIcon} variants={iconVariants}>
         +
       </motion.span>

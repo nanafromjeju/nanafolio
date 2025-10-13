@@ -69,6 +69,7 @@ const ProjectSection = () => {
               title={project.title}
               subtitle={project.subtitle}
               date={project.date}
+              onClick={() => window.open(project.link, '_blank')}
             />
           </div>
         ))}
@@ -79,7 +80,7 @@ const ProjectSection = () => {
 
 const projectSectionContainer = css`
   width: 100%;
-  height: 300vh;
+  height: 200vh;
   background: #000;
   overflow: hidden;
 `;
@@ -101,7 +102,7 @@ const orbitContainer = css`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;

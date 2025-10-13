@@ -35,21 +35,21 @@ const AboutSection = () => {
         >
           A frontend developer passionate about solving UX problems
         </motion.p>
+      </motion.div>
 
-        <motion.div
-          css={profileCardWrapper}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <ProfileCard
-            type="EXPERIENCE"
-            title="TEAMTOYS"
-            subtitle="Front-end Developer"
-            date="2025.05 - Present"
-          />
-        </motion.div>
+      <motion.div
+        css={profileCardWrapper}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      >
+        <ProfileCard
+          type="EXPERIENCE"
+          title="TEAMTOYS"
+          subtitle="Front-end Developer"
+          date="2025.05 - Present"
+        />
       </motion.div>
 
       <div css={rollingTextContainer}>
@@ -96,10 +96,14 @@ const aboutDescription = css`
 `;
 
 const profileCardWrapper = css`
+  position: absolute;
+  top: 30%;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   gap: 40px;
-  padding: 30px 20px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 `;
 
 const rollingTextContainer = css`
