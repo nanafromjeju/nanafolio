@@ -37,20 +37,13 @@ const AboutSection = () => {
         </motion.p>
       </motion.div>
 
-      <motion.div
-        css={profileCardWrapper}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-      >
-        <ProfileCard
-          type="EXPERIENCE"
-          title="TEAMTOYS"
-          subtitle="Front-end Developer"
-          date="2025.05 - Present"
-        />
-      </motion.div>
+      <ProfileCard
+        type="EXPERIENCE"
+        title="TEAMTOYS"
+        subtitle="Front-end Developer"
+        date="2025.05 - Present"
+        css={profileCard}
+      />
 
       <div css={rollingTextContainer}>
         <h1 css={rollingTextWrapper}>
@@ -95,15 +88,12 @@ const aboutDescription = css`
   font-family: 'Supply', sans-serif;
 `;
 
-const profileCardWrapper = css`
-  position: absolute;
-  top: 30%;
-  display: flex;
+const profileCard = css`
+  height: 100%;
+  display: block;
   justify-content: center;
-  gap: 40px;
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
+  align-items: center;
+  margin: 0 auto;
 `;
 
 const rollingTextContainer = css`
