@@ -26,10 +26,10 @@ export const rollingTexts = [
 export const projects = [
   {
     type: 'PROJECT 01',
-    title: 'Sojib',
-    subtitle: 'Class Action Website',
+    title: 'super-freak',
+    subtitle: 'Video Content Creator',
     date: '2024.10',
-    link: 'https://sojib.co.kr',
+    link: 'https://superfreak.kr',
   },
   {
     type: 'PROJECT 02',
